@@ -17,16 +17,17 @@
 
 html {
   font-size: $base-font-size;
+  --background-image: url('https://api.suyanw.cn/api/scenery.php'); // 在这里引用你的背景图 URL
 }
 
 body {
   font-family: $base-font;
   color: $base-color;
   line-height: 1.7em;
-	 background-image: url('https://example.com/path/to/your/background.jpg'); /* 替换为您的背景图 URL */
-    background-size: cover; /* 将背景图铺满 */
-    background-attachment: fixed; /* 固定背景 */
-    color: #fff; /* 文字颜色设置为白色以在深色背景上可读 */
+  background-image: var(--background-image); /* 使用自定义属性 */
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
 }
 
 .container {
