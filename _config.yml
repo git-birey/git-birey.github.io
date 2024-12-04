@@ -1,121 +1,88 @@
 #
-# This file contains configuration flags to customize your site
+# 该文件包含用于自定义站点的配置标志
 #
 
-# Name of your site (displayed in the header)
-name: "lbirey blog"
-# Short bio or description (displayed in the header)
+# 您的站点名称（显示在标题中）
+name: "lbirey 博客"
+# 简短的简介或描述（显示在标题中）
 description: "个人技术资源 | 日常分享"
 
-#
-# Flags below are optional
-#
+# 背景图片 URL
+background_image: "https://api.suyanw.cn/api/scenery.php" # 替换为您背景图的实际 URL
 
-# URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://github.com/lemonchann/images/raw/master/gzh/%E6%96%87%E6%9C%AB%E6%8E%A8%E5%B9%BF%E6%96%87%E6%A1%88.png
+# 下面的标志是可选的
+# 你的头像或个人资料图片的 URL（你可以使用你的 GitHub 个人资料图片）
+avatar: https://api.suyanw.cn/api/mcapi.php
 # 你的favicon（出现在浏览器tab上）图片URL，建议使用较小(64px × 64px)的图片
 favicon: https://d29fhpw069ctt2.cloudfront.net/icon/image/120252/preview.svg
 
-# Tabs in header. There are 'Blog', 'About', 'Archive', 'Tags'
-# and URL Link(e.g. 'Theme' tab below) tabs. If you don't need one, just delete
-# it from the list(Delete '- name: ' and 'url: ', too!)
+# 标题中的选项卡。有“博客”、“关于”、“存档”、“标签”
+# 和 URL 链接（例如下面的“主题”选项卡）选项卡。如果不需要的话删除即可
 navigation:
   - name: 首页
     url: /
   - name: 关于
-    url: /about
+    url: /关于
   - name: 归档
-    url: /archive
+    url: /存档
   - name: 标签
-    url: /tags
+    url: /标签
 
-# Pagination
+# 分页
 paginate: 8
 
-excerpt_separator: <!-- more -->
-
-# Includes an icon in the footer for each username you enter
-footer-links:
-  #weibo: frommidworld #请输入你的微博个性域名 https://www.weibo.com/<thispart>
-  behance: # https://wob.us.kg/<username>
-  dribbble:
-  zhihu: lbirey
+# 在页脚中为您输入的每个用户名添加一个图标
+footer_links:
+  weibo: https://www.weibo.com/<thispart> # 请替换为您的微博链接
+  behavior: https://wob.us.kg/<用户名>
+  zhihu: https://www.zhihu.com/people/lbirey
   email: lbirey@outlook.com
-  facebook:
-  flickr:
-  github: lbirey
-  googleplus: # anything in your profile username that comes after plus.google.com/
-  instagram:
-  linkedin:
-  pinterest:
-  rss: # just type anything here for a working RSS icon
-  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-  tumblr: # https://<username>.us.com
-  #twitter: frommidworld
-  youtube:
+  github: https://github.com/lbirey
+  rss: # 只需在此输入任何内容即可获得可用的 RSS 图标
 
-# Text under the icons in footer
-footer-text: Copyright (c) 2019 lemon
+# 页脚图标下的文本
+footer_text: 版权 (c) 2019 柠檬
 
-# Enter your Disqus shortname (not your username) to enable commenting on posts
-# You can find your shortname on the Settings page of your Disqus account
-disqus: # fromendworld
+# 输入您的 Disqus 简称（不是您的用户名）以启用对帖子的评论
+disqus: your_disqus_shortname
 
-# Gitalk
+# Gitalk 配置
 gitalk:
   clientID: bd65d5c0df878155b7fa
   clientSecret: d0220762c05c2d6b6f6152a0f0e4b6b090de9729
   repo: lbirey.github.io
   owner: lbirey
 
-# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-#google_analytics: 
-
-# Your website URL (e.g. http://lbirey.github.io or http://www.lbirey.github.io)
-# Used for Sitemap.xml and your RSS feed
+# 您的网站 URL
 url: https://lbirey.github.io
 
-# If you're hosting your site at a Project repository on GitHub pages
-# (http://yourusername.github.io/repository-name)
-# and NOT your User repository (http://yourusername.github.io)
-# then add in the baseurl here, like this: "/repository-name"
-# baseurl: 
-
-#
-# !! You don't need to change any of the configuration flags below !!
-#
-
+# !! 您不需要更改下面的配置标志 !!
 permalink: /:title/
 paginate_path: /page:num/
 
-# The release of Jekyll Now that you're using
+# Jekyll 版本
 version: v1.2.0
 
-# Jekyll 3 now only supports Kramdown for Markdown
+# Markdown 和 Sass 配置
 kramdown:
-  # Use GitHub flavored markdown, including triple backtick fenced code blocks
   input: GFM
-  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
   syntax_highlighter: rouge
   syntax_highlighter_opts:
-    # Use existing pygments syntax highlighting css
     css_class: 'highlight'
 
-# Set the Sass partials directory, as we're using @imports
 sass:
-  style: :expanded # You might prefer to minify using :compressed
+  style: :expanded 
 
-# Use the following plug-ins
+# 插件
 plugins:
-  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-sitemap # 创建 Sitemap
+  - jekyll-feed # 创建 Atom feed
   - jekyll-paginate
 
-# Exclude these files from your production _site
+# 排除的文件
 exclude:
   - Gemfile
   - Gemfile.lock
   - LICENSE
   - README.md
   - CNAME
-
